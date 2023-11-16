@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC", crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM", crossorigin="anonymous")
+    title
+      | Yangiliklar
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.bg-primary
+      div.container-fluid
+        a.navbar-brand(href="/")
+          span(style="color: white;") IT News
+        button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        div.collapse.navbar-collapse#navbarSupportedContent
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            li.nav-item
+              a.nav-link.active(aria-current="page", href="/admin")
+                span(style="color: white;") Administrator
+            li.nav-item
+              a.nav-link(href="#")
+                span(style="color: white;") Top ko'rilganlar
+            li.nav-item
+              a.nav-link(href="#")
+                span(style="color: white;") Biz haqimizda
+            li.nav-item
+              a.nav-link(href="/users/add-users")
+                span(style="color: white;") Add Users
+          form.d-flex(method="POST")
+            //- Add your CSRF token logic here if using Django
+            input.form-control.me-2(type="search", placeholder="qidiruv...", aria-label="Search")
+            button.btn.btn-light(type="submit") Qidiruv
+    div.container.row.sm-2
+        each user in users
+            div.col-sm-3.mt-5
+                div.card
+                    img(style="height: 250px;", src=`https://www.w3schools.com/howto/img_avatar.png`, class="card-img-top", alt="...")
+                    div.card-body
+                        h5.card-title #{user.username}
+                        h5.card-title #{user.description}
+                        p.card-text
+                            i.fa.fa-eye(style="font-size:20px") 15
+                        p.card-text
+                            i.fa.fa-clock-o(aria-hidden="true") 5 minutes ago
+                        a.btn.btn-primary(href=`/`, style="width: 100%;") Batafsil

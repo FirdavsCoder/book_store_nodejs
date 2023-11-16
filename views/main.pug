@@ -2,10 +2,11 @@ doctype html
 html(lang="en")
   head
     meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
-    title Kitob do'koni
+    title #{title   }
     meta(name="keywords", content="")
     meta(name="description", content="")
     link(href="../css/style.css", rel="stylesheet", type="text/css")
+    
   body
     #templatemo_container
       #templatemo_menu
@@ -61,52 +62,16 @@ html(lang="en")
             a(href="http://jigsaw.w3.org/css-validator/check/referer")
               img(src="http://jigsaw.w3.org/css-validator/images/vcss-blue", style="border:0;width:88px;height:31px", alt="Valid CSS!", vspace="8", border="0")
         #templatemo_content_right
-          .templatemo_product_box
-            h1 Photography
-              span (by Best Author)
-            img(src="../images/templatemo_image_01.jpg", alt="image")
-            .product_info
-              p Etiam luctus. Quisque facilisis suscipit elit. Curabitur...
-              h3 $55
-              .buy_now_button: a(href="/subpage") Buy Now
-              .detail_button: a(href="/subpage") Detail
-            .cleaner
-          .cleaner_with_width
-          .templatemo_product_box
-            a(href="/subpage", style="text-decoration: none;")
-              h1 Cooking
-                span (by New Author)
-            img(src="../images/templatemo_image_02.jpg", alt="image")
-            .product_info
-              p Aliquam a dui, ac magna quis est eleifend dictum.
-              h3 $35
-              .buy_now_button: a(href="/subpage") Buy Now
-              .detail_button: a(href="/subpage") Detail
-            .cleaner
-          .cleaner_with_height
-          .templatemo_product_box
-            h1 Gardening
-              span (by Famous Author)
-            img(src="../images/templatemo_image_03.jpg", alt="image")
-            .product_info
-              p Ut fringilla enim sed turpis. Sed justo dolor, convallis at.
-              h3 $65
-              .buy_now_button: a(href="/subpage") Buy Now
-              .detail_button: a(href="/subpage") Detail
-            .cleaner
-          .cleaner_with_width
-          .templatemo_product_box
-            h1 Sushi Book
-              span (by Japanese Name)
-            img(src="../images/templatemo_image_04.jpg", alt="image")
-            .product_info
-              p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              h3 $45
-              .buy_now_button: a(href="/subpage") Buy Now
-              .detail_button: a(href="/subpage") Detail
-            .cleaner
-          .cleaner_with_height
-          a(href="/subpage"): img(src="../images/templatemo_ads.jpg", alt="ads")
+            //- if userlar > 0
+            each user in users 
+                .card(style="width: 18rem; display: block;")
+                img.card-img-top(src="https://st3.depositphotos.com/15648834/17930/v/450/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg",style="border:0;width:250px;height:300px;display: block;", alt="...")
+                .card-body
+                    p.card-text #{user.username}
+                    p.card-text #{user.age}
+
+        
+            a(href="/subpage"): img(src="../images/templatemo_ads.jpg", alt="ads")
       #templatemo_footer
         | Home | 
         a(href="/subpage") Search | 
