@@ -1,14 +1,120 @@
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body 
-        header 
-            nav 
-                ul 
-                    li 
-                        a(href="/")Bosh sahifa 
-                    li 
-                        a(href="/add-users")Add users 
+  head
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    title Book Store Template, Free CSS Template, CSS Website Layout
+    meta(name="keywords", content="")
+    meta(name="description", content="")
+    link(href="../css/style.css", rel="stylesheet", type="text/css")
+  body
+    #templatemo_container
+      #templatemo_menu
+        ul
+          li: a(href="/", class="current") Home
+          li: a(href="/subpage") Search
+          li: a(href="/subpage") Books
+          li: a(href="/subpage") New Releases
+          li: a(href="#") Company
+          li: a(href="#") Contact
+      #templatemo_header
+        #templatemo_special_offers
+          p
+            span 25%
+            |  discounts for purchase over $80
+          a(href="/subpage", style="margin-left: 50px;") Read more...
+        #templatemo_new_books
+          ul
+            li Suspen disse
+            li Maece nas metus
+            li In sed risus ac feli
+          a(href="/subpage", style="margin-left: 50px;") Read more...
+      #templatemo_content
+        #templatemo_content_left
+          .templatemo_content_left_section
+            h1 Categories
+            ul
+              li: a(href="/subpage") Donec accumsan urna
+              li: a(href="/subpage") Proin vulputate justo
+              li: a(href="#") In sed risus ac feli
+              li: a(href="#") Aliquam tristique dolor
+              li: a(href="#") Maece nas metus
+              li: a(href="#") Sed pellentesque placerat
+              li: a(href="#") Suspen disse
+              li: a(href="#") Maece nas metus
+              li: a(href="#") In sed risus ac feli
+          .templatemo_content_left_section
+            h1 Bestsellers
+            ul
+              li: a(href="#") Vestibulum ullamcorper
+              li: a(href="#") Maece nas metus
+              li: a(href="#") In sed risus ac feli
+              li: a(href="#") Praesent mattis varius
+              li: a(href="#") Maece nas metus
+              li: a(href="#") In sed risus ac feli
+              li: a(href="#") Flash Templates
+              li: a(href="#") CSS Templates
+              li: a(href="#") Web Design
+              li: a(href="http://www.photovaco.com", target="_parent") Free Photos
+          .templatemo_content_left_section
+            a(href="http://validator.w3.org/check?uri=referer")
+              img(src="http://www.w3.org/Icons/valid-xhtml10", style="border:0;width:88px;height:31px", alt="Valid XHTML 1.0 Transitional", width="88", height="31", vspace="8", border="0")
+            a(href="http://jigsaw.w3.org/css-validator/check/referer")
+              img(src="http://jigsaw.w3.org/css-validator/images/vcss-blue", style="border:0;width:88px;height:31px", alt="Valid CSS!", vspace="8", border="0")
+        #templatemo_content_right
+          .templatemo_product_box
+            h1 Photography
+              span (by Best Author)
+            img(src="../images/templatemo_image_01.jpg", alt="image")
+            .product_info
+              p Etiam luctus. Quisque facilisis suscipit elit. Curabitur...
+              h3 $55
+              .buy_now_button: a(href="/subpage") Buy Now
+              .detail_button: a(href="/subpage") Detail
+            .cleaner
+          .cleaner_with_width
+          .templatemo_product_box
+            a(href="/subpage", style="text-decoration: none;")
+              h1 Cooking
+                span (by New Author)
+            img(src="../images/templatemo_image_02.jpg", alt="image")
+            .product_info
+              p Aliquam a dui, ac magna quis est eleifend dictum.
+              h3 $35
+              .buy_now_button: a(href="/subpage") Buy Now
+              .detail_button: a(href="/subpage") Detail
+            .cleaner
+          .cleaner_with_height
+          .templatemo_product_box
+            h1 Gardening
+              span (by Famous Author)
+            img(src="../images/templatemo_image_03.jpg", alt="image")
+            .product_info
+              p Ut fringilla enim sed turpis. Sed justo dolor, convallis at.
+              h3 $65
+              .buy_now_button: a(href="/subpage") Buy Now
+              .detail_button: a(href="/subpage") Detail
+            .cleaner
+          .cleaner_with_width
+          .templatemo_product_box
+            h1 Sushi Book
+              span (by Japanese Name)
+            img(src="../images/templatemo_image_04.jpg", alt="image")
+            .product_info
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              h3 $45
+              .buy_now_button: a(href="/subpage") Buy Now
+              .detail_button: a(href="/subpage") Detail
+            .cleaner
+          .cleaner_with_height
+          a(href="/subpage"): img(src="../images/templatemo_ads.jpg", alt="ads")
+      #templatemo_footer
+        | Home | 
+        a(href="/subpage") Search | 
+        a(href="/subpage") Books | 
+        a(href="#") New Releases | 
+        a(href="#") FAQs | 
+        a(href="#") Contact Us
+        br
+        | Copyright © 2024 
+        a(href="#"): strong Your Company Name
+        | <!-- Credit: www.templatemo.com -->
