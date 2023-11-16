@@ -5,7 +5,8 @@ const path = require("path")
 const users = require("./users")
 
 router.get("/", (req, res) => {
-    res.render("main")
+    console.log(users.users)
+    res.render("main.pug")
 })
 
 router.get("/subpage", (req, res) => {

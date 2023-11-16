@@ -7,8 +7,8 @@ const path = require("path")
 const app = express()
 
 
-app.use("view engine", "pug")
-app.use("views", "views")
+app.set("view engine", "pug")
+app.set("views", "views")
 
 
 // Body parsers
@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, "public")))
 
 // Routers
 app.use("/users", userRoutes.router)
-app.use(mainRoutes)
+app.use("/", mainRoutes)
 
 
 
