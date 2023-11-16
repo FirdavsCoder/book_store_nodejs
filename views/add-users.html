@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Bosh sahifa</a>
+                </li>
+                <li>
+                    <a href="/add-users">Add Users</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Add User</h1>
+        <form action='/users' method='POST'>
+            <input type='text' name='username'>
+            <input type='number', name='age'>
+            <button type='submit'>Send</button>
+        </form>
+    </main>
+</body>
+</html>
