@@ -9,7 +9,7 @@ router.get("/bosh", (req, res) => {
 })
 
 router.get("/add-users", (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/add-users.html"))
+    res.render("add-users")
 })
 
 
