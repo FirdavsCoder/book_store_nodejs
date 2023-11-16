@@ -4,6 +4,10 @@ const path = require("path")
 
 const users = []
 
+router.get("/bosh", (req, res) => {
+    res.render("main")
+})
+
 router.get("/add-users", (req, res) => {
     res.sendFile(path.join(__dirname, "../views/add-users.html"))
 })
