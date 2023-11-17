@@ -24,7 +24,7 @@ const getBookById = async (req, res) => {
     const books = bookData.read()
     const bookId = Number(req.params.id)
     const foundBook = books.find((book) => book.id === bookId)
-
+    console.log("Mana shu ishlab ketvotir");
     console.log(foundBook)
     if (foundBook) {
         res.render("new_detail", {foundBook})
@@ -40,6 +40,7 @@ const getBookById = async (req, res) => {
 const createBook = async (req, res) => {
     const books = bookData.read()
     const body = req.body
+    console.log(body);
 
     // if (!body.title || !isNaN(body.price) || !isNaN(body.isbn) || !body.description || !body.author || !isNaN(body.page) ){
     //     return res.render("404")
@@ -50,10 +51,10 @@ const createBook = async (req, res) => {
     //     return res.render("404")
     // }
     const newId = idGenerate(books)
-    const newBook = new BookClass(newId, body.name, body.count, body.duration)
+    const newBook = new BookClass(newId, body.title, body.description, body.author, body.price, body.isbn, body.page, body.photo)
     books.push(newBook)
     bookData.write(books)
-    res.redirect("/", {users: books})
+    res.redirect("/")
 }
 
 //@route                PUT /books/:id

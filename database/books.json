@@ -10,53 +10,83 @@
         "photo": "https://kitobxon.com/img_knigi/s1546.jpg"
     },
     {
-        "id": 1,
-        "title": "Sariq devni minib",
-        "description": "Hajviy roman",
-        "author": "Xudoyberdi To'xtaboyev",
-        "price": 30000,
-        "isbn": 4548684,
-        "page": 123,
-        "photo": "https://kitobxon.com/img_knigi/s1546.jpg"
-    },
-    {
-        "id": 1,
-        "title": "Sariq devni minib",
-        "description": "Hajviy roman",
-        "author": "Xudoyberdi To'xtaboyev",
-        "price": 30000,
-        "isbn": 4548684,
-        "page": 123,
-        "photo": "https://kitobxon.com/img_knigi/s451.jpg"
-    },
-    {
-        "id": 1,
-        "title": "Sariq devni minib",
-        "description": "Hajviy roman",
-        "author": "Xudoyberdi To'xtaboyev",
-        "price": 30000,
-        "isbn": 4548684,
-        "page": 123,
-        "photo": "https://kitobxon.com/img_knigi/s892.jpg"
-    },
-    {
-        "id": 1,
-        "title": "Sariq devni minib",
-        "description": "Hajviy roman",
-        "author": "Xudoyberdi To'xtaboyev",
-        "price": 30000,
-        "isbn": 4548684,
-        "page": 123,
-        "photo": "https://kitobxon.com/img_knigi/s2894.jpg"
-    },
-    {
-        "id": 1,
-        "title": "Sariq devni minib",
-        "description": "Hajviy roman",
-        "author": "Xudoyberdi To'xtaboyev",
-        "price": 30000,
-        "isbn": 4548684,
-        "page": 123,
+        "id": 2,
+        "title": "dfgdfg",
+        "description": "sdfgsdfg",
+        "author": "sdfgsdfg",
+        "price": "50000",
+        "isbn": "1231891681",
+        "page": "153",
         "photo": "https://kitobxon.com/img_knigi/s969.jpg"
+    },
+    {
+        "id": 3,
+        "title": "dfgdfg",
+        "description": "sdfgsdfg",
+        "author": "sdfgsdfg",
+        "price": "50000",
+        "isbn": "1231891681",
+        "page": "153",
+        "photo": "https://kitobxon.com/img_knigi/s969.jpg"
+    },
+    {
+        "id": 4,
+        "title": "sdsdvdvdsVsdvSRGAR",
+        "description": "ZSDFsdfSZDFSAD",
+        "author": "asdfasdf",
+        "price": "50000",
+        "isbn": "16581681",
+        "page": "489",
+        "photo": "https://kitobxon.com/img_knigi/s969.jpg"
+    },
+    {
+        "id": 5,
+        "title": "DFZSDFZSD",
+        "description": "SDFZSDFZSDF",
+        "author": "ZSDFZSDFZSDF",
+        "price": "50000",
+        "isbn": "1231891681",
+        "page": "41",
+        "photo": "https://kitobxon.com/img_knigi/1546.jpg"
+    },
+    {
+        "id": 6,
+        "title": "DFZSDFZSD",
+        "description": "SDFZSDFZSDF",
+        "author": "ZSDFZSDFZSDF",
+        "price": "50000",
+        "isbn": "1231891681",
+        "page": "41",
+        "photo": "https://kitobxon.com/img_knigi/1546.jpg"
+    },
+    {
+        "id": 7,
+        "title": "DFZSDFZSD",
+        "description": "SDFZSDFZSDF",
+        "author": "ZSDFZSDFZSDF",
+        "price": "50000",
+        "isbn": "1231891681",
+        "page": "41",
+        "photo": "https://kitobxon.com/img_knigi/1546.jpg"
+    },
+    {
+        "id": 8,
+        "title": "DFZSDFZSD",
+        "description": "SDFZSDFZSDF",
+        "author": "ZSDFZSDFZSDF",
+        "price": "50000",
+        "isbn": "1231891681",
+        "page": "41",
+        "photo": "https://kitobxon.com/img_knigi/1546.jpg"
+    },
+    {
+        "id": 9,
+        "title": "dfggfg",
+        "description": "sdfgsdgfsd",
+        "author": "sdfgsdfg",
+        "price": "45000",
+        "isbn": "1231891681",
+        "page": "1861",
+        "photo": "https://kitobxon.com/img_knigi/1546.jpg"
     }
 ]

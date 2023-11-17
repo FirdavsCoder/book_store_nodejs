@@ -11,17 +11,13 @@ const {
 } = require("../controllers/bookController")
 
 
-router.get("/all", getAllBooks)
-router.get("/:id", getBookById)
 
 
-router.get("/bosh", (req, res) => {
-    res.render("main")
-})
+const addNewPosterPage = (req, res) => {
+    res.render('add-users')
+  }
 
-router.get("/add-users", (req, res) => {
-    res.render("add-users")
-})
+router.get("/add-users", addNewPosterPage)
 
 
 
