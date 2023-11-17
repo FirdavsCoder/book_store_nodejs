@@ -13,7 +13,7 @@ const bookData = new DataSource(booksDatabasePath)
 //@access               Public
 const getAllBooks = async (req, res) => {
     const books = bookData.read()
-    res.status(200).json(books)
+    res.render("news", {users: books})
 }
 
 
@@ -27,9 +27,9 @@ const getBookById = async (req, res) => {
 
     console.log(foundBook)
     if (foundBook) {
-        res.status(200).json(new ResponseData("Book found!", foundBook, null))
+        res.render("new_detail", {foundBook})
     } else {
-        res.status(404).json(new ResponseData("Book Not Found!", null, null))
+        res.render("404")
     }
 }
 
@@ -41,28 +41,19 @@ const createBook = async (req, res) => {
     const books = bookData.read()
     const body = req.body
 
-    if (!body.name || !isNaN(body.count) || !isNaN(body.duration)){
-        return res.status(400).json(new ResponseData("name, count and duration" +
-            " must be required or count and duration must be Number!", null, null))
+    if (!body.title || !isNaN(body.price) || !isNaN(body.isbn) || !body.description || !body.author || !isNaN(body.page) ){
+        return res.render("404")
     }
 
     const foundBookByName = books.find((book) => book.name === body.name)
     if (foundBookByName) {
-        return res.status(
-            400
-        ).json(
-            new ResponseData(
-                "This name already exist",
-                null,
-                null
-            )
-        )
+        return res.render("404")
     }
     const newId = idGenerate(books)
     const newBook = new BookClass(newId, body.name, body.count, body.duration)
     books.push(newBook)
     bookData.write(books)
-    res.status(201).json(new ResponseData("Book created successfully!", newBook, null))
+    res.render("news")
 }
 
 //@route                PUT /books/:id
