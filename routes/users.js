@@ -15,10 +15,9 @@ const {
 
 const addNewPosterPage = (req, res) => {
     res.render('add-users')
-  }
+}
 
 router.get("/add-users", addNewPosterPage)
-
 
 
 router.post("/", createBook)
