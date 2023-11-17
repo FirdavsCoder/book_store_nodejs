@@ -1,3 +1,4 @@
+const { log } = require("console")
 const express = require("express")
 const router = express.Router()
 const path = require("path")
@@ -15,7 +16,8 @@ router.get("/add-users", (req, res) => {
 
 
 router.post("/", (req, res) => {
-    users.push({username: req.body.username, age: req.body.age})
+    log(req.body)
+    users.push({title: req.body.title, description: req.body.description, author: req.body.author, price: req.body.price, isbn: req.body.isbn, page: req.body.page, photo: req.body.photo})
     res.redirect("/")
 })
 

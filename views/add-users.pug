@@ -1,7 +1,7 @@
 extends layouts/main-layout.pug
 block content
     main
-      div.container-xxl
+      div.container-sm
         h1 Add User
         form(action="/users", method="POST")
           //- <input type='text' name='username'>
@@ -24,6 +24,9 @@ block content
           div.form-floating.mb-3
             input.form-control#floatingInput(type="number", placeholder="pages", name="page")
             label(for="floatingInput") Page
+          div.form-floating.mb-3
+            input.form-control#floatingInput(type="link", placeholder="photo link", name="photo")
+            label(for="floatingInput") Picture Link
           br
-          button.btn.btn-primary(type="submit", style="width: 100%; height: 60px") Yuborish
+          button.btn.btn-success(type="submit", style="width: 100%; height: 60px") Yuborish
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM", crossorigin="anonymous")

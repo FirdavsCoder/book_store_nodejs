@@ -4,15 +4,14 @@ block content
         each user in users
             div.col-sm-3.mt-5
                 div.card
-                    img(style="height: 270px;", src=`https://www.w3schools.com/howto/img_avatar.png`, class="card-img-top", alt="...")
+                    img(src=`${user.photo}`, class="card-img-top", alt="...", style="height: 270px;")
                     div.card-body
-                        h5.card-title #{user.username}
-                        h5.card-title #{user.description}
+                        h5.card-title #{user.title}
                         p.card-text
-                            i.fa.fa-eye(style="font-size:20px") 15
+                            i.fa.fa-eye(style="font-size:20px") #{user.description}
                         p.card-text
                             i.fa.fa-clock-o(aria-hidden="true") 5 minutes ago
                         a.btn.btn-primary(href=`/`, style="width: 100%;") Batafsil
 
 
-                        
+
