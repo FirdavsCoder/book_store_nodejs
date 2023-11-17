@@ -8,8 +8,8 @@ const {
 
 router.get("/all", getAllBooks)
 router.get("/:id", getBookById)
-// router.post("/", createBook)
-// router.delete("/:id", deleteBook)
-// router.put("/:id", updateBook)
+router.post("/", createBook)
+router.delete("/:id", deleteBook)
+router.put("/:id", updateBook)
 
 module.exports = router;
