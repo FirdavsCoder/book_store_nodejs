@@ -22,6 +22,7 @@ router.get("/add-users", addNewPosterPage)
 
 
 router.post("/", createBook)
+router.get("/:id", getBookById)
 
 exports.router = router
 exports.users = users
