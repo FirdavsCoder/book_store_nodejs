@@ -41,19 +41,19 @@ const createBook = async (req, res) => {
     const books = bookData.read()
     const body = req.body
 
-    if (!body.title || !isNaN(body.price) || !isNaN(body.isbn) || !body.description || !body.author || !isNaN(body.page) ){
-        return res.render("404")
-    }
+    // if (!body.title || !isNaN(body.price) || !isNaN(body.isbn) || !body.description || !body.author || !isNaN(body.page) ){
+    //     return res.render("404")
+    // }
 
-    const foundBookByName = books.find((book) => book.name === body.name)
-    if (foundBookByName) {
-        return res.render("404")
-    }
+    // const foundBookByName = books.find((book) => book.name === body.name)
+    // if (foundBookByName) {
+    //     return res.render("404")
+    // }
     const newId = idGenerate(books)
     const newBook = new BookClass(newId, body.name, body.count, body.duration)
     books.push(newBook)
     bookData.write(books)
-    res.render("news")
+    res.redirect("/", {users: books})
 }
 
 //@route                PUT /books/:id

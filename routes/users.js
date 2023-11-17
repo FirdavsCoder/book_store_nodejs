@@ -5,6 +5,16 @@ const path = require("path")
 
 const users = []
 
+
+const {
+    getAllBooks, getBookById, createBook, deleteBook, updateBook
+} = require("../controllers/bookController")
+
+
+router.get("/all", getAllBooks)
+router.get("/:id", getBookById)
+
+
 router.get("/bosh", (req, res) => {
     res.render("main")
 })
@@ -15,11 +25,7 @@ router.get("/add-users", (req, res) => {
 
 
 
-router.post("/", (req, res) => {
-    log(req.body)
-    users.push({title: req.body.title, description: req.body.description, author: req.body.author, price: req.body.price, isbn: req.body.isbn, page: req.body.page, photo: req.body.photo})
-    res.redirect("/")
-})
+router.post("/", createBook)
 
 exports.router = router
 exports.users = users

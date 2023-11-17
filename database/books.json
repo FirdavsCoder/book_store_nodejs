@@ -1,14 +1,62 @@
 [
     {
         "id": 1,
-        "name": "Sariq devni minib",
-        "count": 10,
-        "duration": 5
+        "title": "Sariq devni minib",
+        "description": "Hajviy roman",
+        "author": "Xudoyberdi To'xtaboyev",
+        "price": 30000,
+        "isbn": 4548684,
+        "page": 123,
+        "photo": "https://kitobxon.com/img_knigi/s1546.jpg"
     },
     {
-        "id": 2,
-        "name": "O'tkan kunlar",
-        "count": 3,
-        "duration": 2
+        "id": 1,
+        "title": "Sariq devni minib",
+        "description": "Hajviy roman",
+        "author": "Xudoyberdi To'xtaboyev",
+        "price": 30000,
+        "isbn": 4548684,
+        "page": 123,
+        "photo": "https://kitobxon.com/img_knigi/s1546.jpg"
+    },
+    {
+        "id": 1,
+        "title": "Sariq devni minib",
+        "description": "Hajviy roman",
+        "author": "Xudoyberdi To'xtaboyev",
+        "price": 30000,
+        "isbn": 4548684,
+        "page": 123,
+        "photo": "https://kitobxon.com/img_knigi/s451.jpg"
+    },
+    {
+        "id": 1,
+        "title": "Sariq devni minib",
+        "description": "Hajviy roman",
+        "author": "Xudoyberdi To'xtaboyev",
+        "price": 30000,
+        "isbn": 4548684,
+        "page": 123,
+        "photo": "https://kitobxon.com/img_knigi/s892.jpg"
+    },
+    {
+        "id": 1,
+        "title": "Sariq devni minib",
+        "description": "Hajviy roman",
+        "author": "Xudoyberdi To'xtaboyev",
+        "price": 30000,
+        "isbn": 4548684,
+        "page": 123,
+        "photo": "https://kitobxon.com/img_knigi/s2894.jpg"
+    },
+    {
+        "id": 1,
+        "title": "Sariq devni minib",
+        "description": "Hajviy roman",
+        "author": "Xudoyberdi To'xtaboyev",
+        "price": 30000,
+        "isbn": 4548684,
+        "page": 123,
+        "photo": "https://kitobxon.com/img_knigi/s969.jpg"
     }
 ]
