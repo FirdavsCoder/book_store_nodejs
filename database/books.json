@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Sariq devni minib",
+        "count": 10,
+        "duration": 5
+    },
+    {
+        "id": 2,
+        "name": "O'tkan kunlar",
+        "count": 3,
+        "duration": 2
+    }
+]

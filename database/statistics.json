@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "user_id": 3,
+        "book_id": 2,
+        "status": "take",
+        "note": [
+            "good",
+            "late"
+        ],
+        "created_at": "10-10-2023 12:55:35"
+    },
+    {
+        "id": 2,
+        "user_id": 6,
+        "book_id": 2,
+        "status": "take",
+        "note": null,
+        "created_at": "[object Undefined]"
+    },
+    {
+        "id": 3,
+        "user_id": 6,
+        "book_id": 2,
+        "status": "take",
+        "note": null,
+        "created_at": "2023-11-13T21:10:24.558Z"
+    },
+    {
+        "id": 4,
+        "user_id": 5,
+        "book_id": 2,
+        "status": "take",
+        "note": null,
+        "created_at": "2023-11-13T21:34:21.174Z"
+    },
+    {
+        "id": 5,
+        "user_id": 7,
+        "book_id": 1,
+        "status": "take",
+        "note": null,
+        "created_at": "2023-11-13T21:35:53.908Z"
+    },
+    {
+        "id": 6,
+        "user_id": null,
+        "book_id": null,
+        "status": "give",
+        "note": [],
+        "created_at": "2023-11-13T22:00:16.264Z"
+    },
+    {
+        "id": 7,
+        "user_id": null,
+        "book_id": null,
+        "status": "give",
+        "note": [
+            "good"
+        ],
+        "created_at": "2023-11-13T22:01:38.905Z"
+    }
+]

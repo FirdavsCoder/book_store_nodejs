@@ -1,0 +1,32 @@
+[
+    {
+        "id": 3,
+        "login": "FY",
+        "full_name": "Firdavs Yorkulov",
+        "age": 17
+    },
+    {
+        "id": 4,
+        "full_name": "John Doe",
+        "login": "JD",
+        "age": 18
+    },
+    {
+        "id": 6,
+        "full_name": "Joe Bydon",
+        "login": "JB",
+        "age": 13
+    },
+    {
+        "id": 5,
+        "full_name": "Joe Bydon",
+        "login": "JB2",
+        "age": 13
+    },
+    {
+        "id": 7,
+        "full_name": "Test User1",
+        "login": "TestUsver3",
+        "age": 25
+    }
+]
