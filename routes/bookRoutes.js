@@ -12,6 +12,4 @@ router.get("/:id", getBookById)
 // router.delete("/:id", deleteBook)
 // router.put("/:id", updateBook)
 
-
-
 module.exports = router;
