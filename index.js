@@ -10,8 +10,9 @@ const app = express()
 
 
 // app.set("view engine", "pug")
-app.engine(".hbs", engine({extname: '.hbs'}))
-app.set("view engine", ".hbs")
+// app.engine(".hbs", engine({extname: '.hbs'}))
+// app.set("view engine", ".hbs")
+app.set("view engine", "ejs")
 app.set("views", "views")
 
 
@@ -33,7 +34,7 @@ app.use("/", mainRoutes)
 
 // Middleware, 404 Page Not Found
 app.use((req, res, next) => {
-    res.render("404")
+    res.render("404", {title: "Page Not Found!"})
 })
 
 // Import PORT variable from .env
