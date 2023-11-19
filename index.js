@@ -1,7 +1,7 @@
 const express = require("express")
 const userRoutes = require("./routes/users")
 const mainRoutes = require("./routes/main")
-const exphbs = require("express-handlebars")
+const {engine} = require("express-handlebars")
 const path = require("path")
 
 // Create app using EXPRESS
@@ -9,7 +9,8 @@ const app = express()
 
 
 // app.set("view engine", "pug")
-app.engine("handlebars", exphbs.engine())
+app.engine(".hbs", engine({extname: '.hbs'}))
+app.set("view engine", ".hbs")
 app.set("views", "views")
 
 
