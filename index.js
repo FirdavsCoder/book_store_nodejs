@@ -1,13 +1,14 @@
 const express = require("express")
 const userRoutes = require("./routes/users")
 const mainRoutes = require("./routes/main")
+const exphbs = require("express-handlebars")
 const path = require("path")
 
 // Create app using EXPRESS
 const app = express()
 
 
-app.set("view engine", "pug")
+// app.set("view engine", "pug")
 app.set("views", "views")
 
 
