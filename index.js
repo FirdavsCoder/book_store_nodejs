@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 })
 
 // Import PORT variable from .env
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 3000
 
 // Server Listener
 app.listen(

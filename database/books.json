@@ -98,5 +98,15 @@
         "isbn": "1231891681",
         "page": "2814",
         "photo": "https://kitobxon.com/img_knigi/s969.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Test uchun yangi kitob",
+        "description": "Test desc",
+        "author": "Firdavs Yorkulov",
+        "price": "45000",
+        "isbn": "1231891681",
+        "page": "1689",
+        "photo": "https://kitobxon.com/img_knigi/s8624.jpg"
     }
 ]
