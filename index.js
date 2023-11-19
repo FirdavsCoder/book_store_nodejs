@@ -9,6 +9,7 @@ const app = express()
 
 
 // app.set("view engine", "pug")
+app.engine("handlebars", exphbs.engine())
 app.set("views", "views")
 
 
