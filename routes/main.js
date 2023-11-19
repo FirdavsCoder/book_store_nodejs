@@ -12,7 +12,7 @@ const bookData = new DataSource(booksDatabasePath)
 
 router.get("/", (req, res) => {
     const books = bookData.read()
-    res.render("news.pug", {title: "Hamma kitoblar", users: books})
+    res.render("news", {title: "Hamma kitoblar", users: books})
 })
 
 // router.get("/subpage", (req, res) => {
