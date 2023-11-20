@@ -1,23 +1,43 @@
 [
     {
-        "id": 1,
-        "title": "Sariq devni minib",
-        "description": "Hajviy roman",
-        "author": "Xudoyberdi To'xtaboyev",
-        "price": 30000,
-        "isbn": 4548684,
-        "page": 123,
-        "photo": "https://kitobxon.com/img_knigi/s1546.jpg"
+        "id": 3,
+        "title": "Yangiladim karochi",
+        "description": "sdfgsdfg",
+        "author": "sdfgsdfg",
+        "price": "50000",
+        "isbn": "1231891681",
+        "page": "153",
+        "photo": "https://kitobxon.com/img_knigi/s969.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Test uchun kitob",
+        "description": "Test uchun description",
+        "author": "Aka-uka Grimlar",
+        "price": "50000",
+        "isbn": "16581681",
+        "page": "135",
+        "photo": "https://kitobxon.com/img_knigi/2805.jpg"
     },
     {
         "id": 9,
-        "title": "dfggfg",
-        "description": "sdfgsdgfsd",
-        "author": "sdfgsdfg",
+        "title": "Sariq devni minib",
+        "description": "Hajviy Roman",
+        "author": "Xudoyberdi To'xtaboyev",
         "price": "45000",
         "isbn": "1231891681",
         "page": "1861",
         "photo": "https://kitobxon.com/img_knigi/1546.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Update Title1",
+        "description": "Test desc",
+        "author": "Firdavs Yorkulov",
+        "price": "45000",
+        "isbn": "1231891681",
+        "page": "1689",
+        "photo": "https://kitobxon.com/img_knigi/s8624.jpg"
     },
     {
         "id": 10,
@@ -27,17 +47,7 @@
         "price": "45000",
         "isbn": "1231891681",
         "page": "2814",
-        "photo": "https://kitobxon.com/img_knigi/s969.jpg"
-    },
-    {
-        "id": 11,
-        "title": "Update Title",
-        "description": "Test desc",
-        "author": "Firdavs Yorkulov",
-        "price": "45000",
-        "isbn": "1231891681",
-        "page": "1689",
-        "photo": "https://kitobxon.com/img_knigi/s8624.jpg"
+        "photo": "https://kitobxon.com/img_knigi/4151.jpg"
     },
     {
         "id": 2,
@@ -47,16 +57,16 @@
         "price": "50000",
         "isbn": "1231891681",
         "page": "153",
-        "photo": "https://kitobxon.com/img_knigi/s969.jpg"
+        "photo": "https://kitobxon.com/img_knigi/2102.jpg"
     },
     {
-        "id": 3,
-        "title": "Yangiladim karochi",
-        "description": "sdfgsdfg",
-        "author": "sdfgsdfg",
-        "price": "50000",
-        "isbn": "1231891681",
-        "page": "153",
-        "photo": "https://kitobxon.com/img_knigi/s969.jpg"
+        "id": 13,
+        "title": "Тириклай кўмилган йигит II-китоб",
+        "description": "Детективлар, Саргузаштлар",
+        "author": "Олимжон Ҳайит",
+        "price": "10600",
+        "isbn": "9789943066317",
+        "page": "456",
+        "photo": "https://kitobxon.com/img_knigi/999.jpg"
     }
 ]

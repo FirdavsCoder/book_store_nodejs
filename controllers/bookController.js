@@ -13,7 +13,7 @@ const bookData = new DataSource(booksDatabasePath)
 //@access               Public
 const getAllBooks = async (req, res) => {
     const books = bookData.read()
-    res.render("books", {title: "Barcha kitoblar", users: books})
+    res.render("book/books", {title: "Barcha kitoblar", users: books})
 }
 
 
@@ -27,9 +27,9 @@ const getBookById = async (req, res) => {
     console.log("Mana shu ishlab ketvotir");
     console.log(foundBook)
     if (foundBook) {
-        res.render("detailPage", {title: `${foundBook.title} detail page`, foundBook})
+        res.render("book/detailPage", {title: `${foundBook.title} detail page`, foundBook})
     } else {
-        res.render("404")
+        res.render("book/404")
     }
 }
 
@@ -107,12 +107,12 @@ const getUpdatePage = async (req, res) => {
     const foundBookIndex = books.findIndex((book) => book.id === bookId)
     const [foundBook] = books.splice(foundBookIndex, 1)
 
-    res.render("book-edit/update", {title: "Update ", foundBook})
+    res.render("book/book-edit/update", {title: "Update ", foundBook})
 }
 
 
 const addBookPage = (req, res) => {
-    res.render('add-book', {title: "Book Add Page"})
+    res.render('book/add-book', {title: "Book Add Page"})
 }
 
 

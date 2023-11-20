@@ -14,14 +14,13 @@ const {
 
 
 const addNewPosterPage = (req, res) => {
-    res.render('add-users')
+    res.render('book/add-users')
 }
 
 router.get("/add-users", addNewPosterPage)
 
 
-router.post("/", createBook)
-router.get("/:id", getBookById)
+
 
 exports.router = router
 exports.users = users

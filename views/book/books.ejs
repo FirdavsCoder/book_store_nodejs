@@ -1,6 +1,9 @@
 <%- include("includes/head.ejs") %>
 <%- include("includes/navbar.ejs") %>
 <!-- Body section -->
+<main>
+
+
 <div class="container d-flex justify-content-center mt-50 mb-50">
   <div class="row">
     <% if (users.length !== 0) { %> <% for (let user of users) { %>
@@ -46,5 +49,6 @@
     <% } %>
   </div>
 </div>
+</main>
 <!-- /Body section -->
 <%- include("includes/foot.ejs") %>
