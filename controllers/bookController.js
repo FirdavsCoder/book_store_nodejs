@@ -13,7 +13,7 @@ const bookData = new DataSource(booksDatabasePath)
 //@access               Public
 const getAllBooks = async (req, res) => {
     const books = bookData.read()
-    res.render("news", {users: books})
+    res.render("books", {title: "Barcha kitoblar", users: books})
 }
 
 
@@ -27,7 +27,7 @@ const getBookById = async (req, res) => {
     console.log("Mana shu ishlab ketvotir");
     console.log(foundBook)
     if (foundBook) {
-        res.render("new_detail", {foundBook})
+        res.render("detailPage", {title: `${foundBook.title} detail page`, foundBook})
     } else {
         res.render("404")
     }

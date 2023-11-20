@@ -1,252 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <title>Yangiliklar</title>
-  </head>
-  <body>
+<%- include("includes/head.ejs") %>
     
 
     <!-- Navbar section -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <span style="color: white;">IT News</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/admin">
-                            <span style="color: white;">Administrator</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span style="color: white;">Top ko'rilganlar</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">
-                            <span style="color: white;">Biz haqimizda</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/users/add-users">
-                            <span style="color: white;">Add Users</span>
-                        </a>
-                    </li>
-                </ul>
-                <form class="d-flex" method="POST">
-                    <input class="form-control me-2" type="search" placeholder="qidiruv..." aria-label="Search">
-                    <button class="btn btn-light" type="submit">Qidiruv</button>
-                </form>
-            </div>
-        </div>
-    </nav>
+<%- include("includes/navbar.ejs") %>
     <!-- /Navbar section -->
 
-    <!-- Body section -->
-    <div class="container d-flex justify-content-center mt-50 mb-50">    
-        <div class="row">
-            <% if (users.length !== 0) { %>
-                <% for (let user of users) { %>
-                    <div class="col-md-4 mt-2 shadow-lg p-8 mb-4 bg-body rounded"> 
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-img-actions">
-                                        <img src="<%= user.photo %>" class="card-img img-fluid" width="96" height="350" alt="">       
-                                </div>
-                            </div>
-                            <div class="card-body bg-light text-center">
-                                <div class="mb-2">
-                                    <h6 class="font-weight-semibold mb-2">
-                                        <a href="#" class="text-default mb-2" data-abc="true"><%= user.title %></a>
-                                    </h6>
-                                    <a href="#" class="text-muted" data-abc="true"><%= user.description %></a>
-                                </div>
-                                <h3 class="mb-0 font-weight-semibold">$<%= user.price %></h3>
-                                <div>
-                                    <i class="fa fa-star star"></i>
-                                    <i class="fa fa-star star"></i>
-                                    <i class="fa fa-star star"></i>
-                                    <i class="fa fa-star star"></i>
-                                </div>
-                                <div class="text-muted mb-3">34 reviews</div>
-                                <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i> Add to cart</button>
-                            </div>
-                        </div>                 
-                    </div>
-                <% } %>
-            <% } else { %>   
-                <h1>Hozirda kitoblar mavjud emas!</h1>
-            <% } %>
+
+    
+    <!-- Body section -->    
+    <div class="b-example-divider"></div>
+    <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Border hero with cropped image and shadows</h1>
+            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Primary</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+            </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+            <img class="rounded-lg-3" src="https://blogs.canterbury.ac.uk/library/wp-content/uploads/sites/638/2020/03/Your-Digital-Library-Image-roadshow-blog.jpg" alt="" width="720">
+        </div>
+        </div>
+    </div>
+
+
+    <div class="b-example-divider"></div>
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Vertically centered hero sign-up form</h1>
+            <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <div class="checkbox mb-3">
+                <label>
+                <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+            <hr class="my-4">
+            <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+            </form>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="b-example-divider"></div>
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Custom cards</h2>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('images/unsplash-photo-1.jpg');">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h3>
+                <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                    <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                </li>
+                <li class="d-flex align-items-center me-3">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                    <small>Earth</small>
+                </li>
+                <li class="d-flex align-items-center">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                    <small>3d</small>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('images/unsplash-photo-2.jpg');">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h3>
+                <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                    <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                </li>
+                <li class="d-flex align-items-center me-3">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                    <small>Pakistan</small>
+                </li>
+                <li class="d-flex align-items-center">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                    <small>4d</small>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('images/unsplash-photo-3.jpg');">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
+                <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                    <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                </li>
+                <li class="d-flex align-items-center me-3">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                    <small>California</small>
+                </li>
+                <li class="d-flex align-items-center">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                    <small>5d</small>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="b-example-divider"></div>
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="https://images.squarespace-cdn.com/content/v1/58e69ce517bffcdc00b6fb67/1506730022770-4X6P5OFVQL6RBPOA7RX6/elibrary.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1>
+            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+            </div>
+        </div>
         </div>
     </div>
     <!-- /Body section -->
 
     <!-- Footer section -->
-    <footer class="bg-primary text-center text-lg-start text-white">
-        <!-- Grid container -->
-        <div class="container p-4">
-        <!--Grid row-->
-        <div class="row my-4">
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-    
-            <div
-                class="rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"
-                style="width: 150px; height: 150px;"
-            >
-                <img
-                src="https://icon-library.com/images/books-icon/books-icon-9.jpg"
-                height="70"
-                alt=""
-                loading="lazy"
-                />
-            </div>
-    
-            <p class="text-center">Homless animal shelter The budgetary unit of the
-                Capital City of Warsaw</p>
-    
-            <ul class="list-unstyled d-flex flex-row justify-content-center">
-                <li>
-                <a class="text-white px-2" href="#!">
-                    <i class="fab fa-facebook-square"></i>
-                </a>
-                </li>
-                <li>
-                <a class="text-white px-2" href="#!">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                </li>
-                <li>
-                <a class="text-white ps-2" href="#!">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                </li>
-            </ul>
-    
-            </div>
-            <!--Grid column-->
-    
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Books</h5>
-    
-            <ul class="list-unstyled">
-                <li class="mb-2">
-                <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>When
-                    your pet is missing</a>
-                </li>
-                <li class="mb-2">
-                <a href="#!" class="text-white"><i
-                    class="fas fa-paw pe-3"
-                    ></i>Recently found</a>
-                </li>
-                <li class="mb-2">
-                <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>How
-                    to adopt?</a>
-                </li>
-                <li class="mb-2">
-                <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Pets
-                    for adoption</a>
-                </li>
-                <li class="mb-2">
-                <a href="#!" class="text-white"><i
-                    class="fas fa-paw pe-3"
-                    ></i>Material gifts</a>
-                </li>
-                <li class="mb-2">
-                <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Help
-                    with walks</a>
-                </li>
-                <li class="mb-2">
-                <a href="#!" class="text-white"><i
-                    class="fas fa-paw pe-3"
-                    ></i>Volunteer activities</a>
-                </li>
-            </ul>
-            </div>
-            <!--Grid column-->
-    
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Books</h5>
-    
-            <ul class="list-unstyled">
-                <li class="mb-2">
-                <a href="#!" class="text-white"><i
-                    class="fas fa-paw pe-3"
-                    ></i>General information</a>
-                </li>
-                <li class="mb-2">
-                <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>About
-                    the shelter</a>
-                </li>
-                <li class="mb-2">
-                <a href="#!" class="text-white"><i
-                    class="fas fa-paw pe-3"
-                    ></i>Statistic data</a>
-                </li>
-                <li class="mb-2">
-                <a href="#!" class="text-white"><i
-                    class="fas fa-paw pe-3"
-                    ></i>Job</a>
-                </li>
-                <li class="mb-2">
-                <a href="#!" class="text-white"><i
-                    class="fas fa-paw pe-3"
-                    ></i>Tenders</a>
-                </li>
-                <li class="mb-2">
-                <a href="#!" class="text-white"><i
-                    class="fas fa-paw pe-3"
-                    ></i>Contact</a>
-                </li>
-            </ul>
-            </div>
-            <!--Grid column-->
-    
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Contact</h5>
-    
-            <ul class="list-unstyled">
-                <li>
-                <p><i class="fas fa-map-marker-alt pe-2"></i>Warsaw, 57 Street,
-                    Poland</p>
-                </li>
-                <li>
-                <p><i class="fas fa-phone pe-2"></i>+ 01 234 567 89</p>
-                </li>
-                <li>
-                <p><i class="fas fa-envelope pe-2 mb-0"></i>contact@example.com</p>
-                </li>
-            </ul>
-            </div>
-            <!--Grid column-->
-        </div>
-        <!--Grid row-->
-        </div>
-        <!-- Grid container -->
-    
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
+    <%- include("includes/foot.ejs") %>
     <!-- /Footer section -->
   </body>
 </html>

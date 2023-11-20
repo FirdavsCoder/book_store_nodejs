@@ -1,5 +1,6 @@
 const express = require("express")
 const userRoutes = require("./routes/users")
+const bookRoutes = require("./routes/bookRoutes")
 const mainRoutes = require("./routes/main")
 const aboutRoutes = require("./routes/about")
 const {engine} = require("express-handlebars")
@@ -23,7 +24,7 @@ app.use(express.static(path.join(__dirname, "public")))
 
 
 // Routers
-app.use("/users", userRoutes.router)
+app.use("/books", bookRoutes)
 app.use("/about", aboutRoutes)
 app.use("/", mainRoutes)
 

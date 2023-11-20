@@ -1,0 +1,50 @@
+<%- include("includes/head.ejs") %>
+<%- include("includes/navbar.ejs") %>
+<!-- Body section -->
+<div class="container d-flex justify-content-center mt-50 mb-50">
+  <div class="row">
+    <% if (users.length !== 0) { %> <% for (let user of users) { %>
+    <div class="col-md-4 mt-2 shadow-lg p-8 mb-4 bg-body rounded">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-img-actions">
+            <img
+              src="<%= user.photo %>"
+              class="card-img img-fluid"
+              width="96"
+              height="350"
+              alt="" />
+          </div>
+        </div>
+        <div class="card-body bg-light text-center">
+          <div class="mb-2">
+            <h6 class="font-weight-semibold mb-2">
+              <a href="/books/<%= user.id %>" class="text-default mb-2" data-abc="true"
+                ><%= user.title %></a
+              >
+            </h6>
+            <a href="/books/<%= user.id %>" class="text-muted" data-abc="true"
+              ><%= user.description %></a
+            >
+          </div>
+          <h3 class="mb-0 font-weight-semibold">$<%= user.price %></h3>
+          <div>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+            <i class="fa fa-star star"></i>
+          </div>
+          <div class="text-muted mb-3">34 reviews</div>
+          <button type="button" class="btn bg-cart">
+            <i class="fa fa-cart-plus mr-2"></i> Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <% } %> <% } else { %>
+    <h1>Hozirda kitoblar mavjud emas!</h1>
+    <% } %>
+  </div>
+</div>
+<!-- /Body section -->
+<%- include("includes/foot.ejs") %>

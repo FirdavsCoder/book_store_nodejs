@@ -1,0 +1,26 @@
+<%- include("includes/head.ejs") %>
+<%- include("includes/navbar.ejs") %>
+
+
+<center>
+    <div class="col-sm-4 mt-4">
+        <div class="card">
+            <img style="height: 400px;width:100%" src="<%= foundBook.photo %>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">📖 Nomi: <%= foundBook.title %></h5>
+                <h5 class="card-title">📝 Kitob haqida: <%= foundBook.description %></h5>
+                <p class="card-text"><i class="fa fa-eye" style="font-size:20px">👤 Muallif: <%= foundBook.author %></i></p>
+                <p class="card-text"><i class="fa fa-clock-o" aria-hidden="true">🔢 ISBN: <%= foundBook.isbn %></i></p>
+                <p class="card-text"><i class="fa fa-eye" style="font-size:20px">💸 Narxi: <%= foundBook.price %>$</i></p>
+                <p class="card-text"><i class="fa fa-clock-o" aria-hidden="true">📄 Varaqlar soni: <%= foundBook.price %></i></p>
+                <a style="width: 50%; display: inline;" href="book/update/<%= foundBook.id %>" class="btn btn-primary">Update</a>
+                <a style="width: 50%; display: inline;" href="book/delete/<%= foundBook.id %>" class="btn btn-danger">Delete</a> <br><br>
+                <a style="width: 100%;" href="/" class="btn btn-success">Delete</a>
+            </div>
+        </div>
+    </div>
+</center><br>
+
+
+
+<%- include("includes/foot.ejs") %>
