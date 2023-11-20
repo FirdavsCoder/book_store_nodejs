@@ -4,8 +4,6 @@ const DataSource = require("../lib/dataSource")
 const router = express.Router()
 const path = require("path")
 
-const {users} = require("./users")
-
 
 const booksDatabasePath = path.join(__dirname, "../database/books.json")
 const bookData = new DataSource(booksDatabasePath)
