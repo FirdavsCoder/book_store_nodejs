@@ -110,11 +110,18 @@ const getUpdatePage = async (req, res) => {
     res.render("book-edit/update", {title: "Update ", foundBook})
 }
 
+
+const addBookPage = (req, res) => {
+    res.render('add-book', {title: "Book Add Page"})
+}
+
+
 module.exports = {
     getAllBooks,
     getBookById,
     getUpdatePage,
     createBook,
     updateBook,
-    deleteBook
+    deleteBook,
+    addBookPage
 }
