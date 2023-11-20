@@ -35,7 +35,7 @@ app.use("/", mainRoutes)
 
 // Middleware, 404 Page Not Found
 app.use((req, res, next) => {
-    res.render("404", {title: "Page Not Found!"})
+    res.render("404", {mavzu: "Page Not Found!"})
 })
 
 // Import PORT variable from .env
