@@ -2,12 +2,16 @@ const express = require("express")
 const router = express.Router()
 
 const {
-    getAllBooks, getBookById, createBook, deleteBook, updateBook
+    getAllBooks, getBookById, createBook, deleteBook, updateBook, getUpdatePage
 } = require("../controllers/bookController")
 
 
+router.get("/book/update/:id", getUpdatePage)
+router.put("/update", updateBook)
 router.get("/", getAllBooks)
 router.get("/:id", getBookById)
+router.post('/:id/edit', updateBook)
+router.post('/:id/delete', deleteBook)
 // router.post("/", createBook)
 // router.delete("/:id", deleteBook)
 // router.put("/:id", updateBook)

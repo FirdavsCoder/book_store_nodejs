@@ -12,9 +12,12 @@
                 <p class="card-text"><i class="fa fa-clock-o" aria-hidden="true">🔢 ISBN: <%= foundBook.isbn %></i></p>
                 <p class="card-text"><i class="fa fa-eye" style="font-size:20px">💸 Narxi: <%= foundBook.price %>$</i></p>
                 <p class="card-text"><i class="fa fa-clock-o" aria-hidden="true">📄 Varaqlar soni: <%= foundBook.price %></i></p>
-                <a style="width: 50%; display: inline;" href="book/update/<%= foundBook.id %>" class="btn btn-primary">Update</a>
-                <a style="width: 50%; display: inline;" href="book/delete/<%= foundBook.id %>" class="btn btn-danger">Delete</a> <br><br>
-                <a style="width: 100%;" href="/" class="btn btn-success">Bosh sahifa</a>
+                <a style="width: 100%; display: inline-block;" href="book/update/<%= foundBook.id %>" class="btn mt-3 btn-primary">Update</a>
+                <form class="d-grid" action="/books/<%= foundBook.id %>/delete" method="post">
+                    <button style="display: inline;" type="submit" class="btn mt-3 btn-danger" style="width: 50%; display: inline;">O'chirish</button>
+                </form>
+                <!-- <a style="width: 50%; display: inline;" href="book/delete/<%= foundBook.id %>" class="btn btn-danger">Delete</a> <br><br> -->
+                <a style="width: 100%;" href="/" class="btn mt-3 btn-success">Bosh sahifa</a>
             </div>
         </div>
     </div>

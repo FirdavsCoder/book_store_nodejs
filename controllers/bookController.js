@@ -54,7 +54,7 @@ const createBook = async (req, res) => {
     const newBook = new BookClass(newId, body.title, body.description, body.author, body.price, body.isbn, body.page, body.photo)
     books.push(newBook)
     bookData.write(books)
-    res.redirect("/")
+    res.redirect("/books")
 }
 
 //@route                PUT /books/:id
@@ -65,28 +65,22 @@ const updateBook = async (req, res) => {
     const bookId = Number(req.params.id)
     const body = req.body
 
-    if (!body.name || isNaN(body.count) || isNaN(body.duration)){
-        return res.status(400).json(new ResponseData("name, count and duration" +
-            " must be required or count and duration must be Number!", null, null))
-    }
-
     const foundBookIndex = books.findIndex((book) => book.id === bookId)
-    const foundBookByName = books.find(book => book.name === body.name)
 
-    if (foundBookIndex === -1) {
-        return res.status(404).json(new ResponseData("Book Not Found!", null, null))
-    }
     const [foundBook] = books.splice(foundBookIndex, 1)
-    if (foundBookByName && foundBook.name !== body.name) {
-        return res.status(400).json(new ResponseData("This name already exist", null, null))
-    }
-    foundBook.name = body.name
-    foundBook.count = body.count
-    foundBook.duration = body.duration
-
+    console.log(foundBook);
+    
+    foundBook.title = body.title
+    foundBook.description = body.description
+    foundBook.author = body.author
+    foundBook.price = body.price
+    foundBook.isbn = body.isbn
+    foundBook.page = body.page
+    foundBook.photo = body.photo
+    
     books.push(foundBook);
     bookData.write(books)
-    return res.status(200).json(new ResponseData("Book successfully updated!", foundBook, null))
+    res.redirect("/books")
 }
 
 //@route                DELETE /books/:id
@@ -102,12 +96,24 @@ const deleteBook = async (req, res) => {
 
     const [deletedBook] = books.splice(foundBookIndex, 1)
     bookData.write(books)
-    return res.status(200).json(new ResponseData("Book deleted successfully!", null, null))
+    return res.redirect("/books")
+}
+
+
+const getUpdatePage = async (req, res) => {
+    const books = bookData.read()
+    const bookId = Number(req.params.id)
+    const body = req.body
+    const foundBookIndex = books.findIndex((book) => book.id === bookId)
+    const [foundBook] = books.splice(foundBookIndex, 1)
+
+    res.render("book-edit/update", {title: "Update ", foundBook})
 }
 
 module.exports = {
     getAllBooks,
     getBookById,
+    getUpdatePage,
     createBook,
     updateBook,
     deleteBook

@@ -10,76 +10,6 @@
         "photo": "https://kitobxon.com/img_knigi/s1546.jpg"
     },
     {
-        "id": 2,
-        "title": "dfgdfg",
-        "description": "sdfgsdfg",
-        "author": "sdfgsdfg",
-        "price": "50000",
-        "isbn": "1231891681",
-        "page": "153",
-        "photo": "https://kitobxon.com/img_knigi/s969.jpg"
-    },
-    {
-        "id": 3,
-        "title": "dfgdfg",
-        "description": "sdfgsdfg",
-        "author": "sdfgsdfg",
-        "price": "50000",
-        "isbn": "1231891681",
-        "page": "153",
-        "photo": "https://kitobxon.com/img_knigi/s969.jpg"
-    },
-    {
-        "id": 4,
-        "title": "sdsdvdvdsVsdvSRGAR",
-        "description": "ZSDFsdfSZDFSAD",
-        "author": "asdfasdf",
-        "price": "50000",
-        "isbn": "16581681",
-        "page": "489",
-        "photo": "https://kitobxon.com/img_knigi/s969.jpg"
-    },
-    {
-        "id": 5,
-        "title": "DFZSDFZSD",
-        "description": "SDFZSDFZSDF",
-        "author": "ZSDFZSDFZSDF",
-        "price": "50000",
-        "isbn": "1231891681",
-        "page": "41",
-        "photo": "https://kitobxon.com/img_knigi/1546.jpg"
-    },
-    {
-        "id": 6,
-        "title": "DFZSDFZSD",
-        "description": "SDFZSDFZSDF",
-        "author": "ZSDFZSDFZSDF",
-        "price": "50000",
-        "isbn": "1231891681",
-        "page": "41",
-        "photo": "https://kitobxon.com/img_knigi/1546.jpg"
-    },
-    {
-        "id": 7,
-        "title": "DFZSDFZSD",
-        "description": "SDFZSDFZSDF",
-        "author": "ZSDFZSDFZSDF",
-        "price": "50000",
-        "isbn": "1231891681",
-        "page": "41",
-        "photo": "https://kitobxon.com/img_knigi/1546.jpg"
-    },
-    {
-        "id": 8,
-        "title": "DFZSDFZSD",
-        "description": "SDFZSDFZSDF",
-        "author": "ZSDFZSDFZSDF",
-        "price": "50000",
-        "isbn": "1231891681",
-        "page": "41",
-        "photo": "https://kitobxon.com/img_knigi/1546.jpg"
-    },
-    {
         "id": 9,
         "title": "dfggfg",
         "description": "sdfgsdgfsd",
@@ -101,12 +31,32 @@
     },
     {
         "id": 11,
-        "title": "Test uchun yangi kitob",
+        "title": "Update Title",
         "description": "Test desc",
         "author": "Firdavs Yorkulov",
         "price": "45000",
         "isbn": "1231891681",
         "page": "1689",
         "photo": "https://kitobxon.com/img_knigi/s8624.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Title yangilandi",
+        "description": "sdfgsdfg",
+        "author": "sdfgsdfg",
+        "price": "50000",
+        "isbn": "1231891681",
+        "page": "153",
+        "photo": "https://kitobxon.com/img_knigi/s969.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Yangiladim karochi",
+        "description": "sdfgsdfg",
+        "author": "sdfgsdfg",
+        "price": "50000",
+        "isbn": "1231891681",
+        "page": "153",
+        "photo": "https://kitobxon.com/img_knigi/s969.jpg"
     }
 ]

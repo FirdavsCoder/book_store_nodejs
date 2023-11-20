@@ -1,0 +1,53 @@
+<!-- Header section -->
+<%- include("../includes/head.ejs") %> <%- include("../includes/navbar.ejs") %>
+<!-- /Header section -->
+
+<!-- Body Section -->
+<br><br>
+
+<br>
+<main>
+    <br>
+    <!-- <h1>Update Book</h1> -->
+    <div class="container-sm">
+        <h1 class="text-primary">Update Book</h1>
+        <form action="/books/<%= foundBook.id %>/edit" method="POST">
+            <div class="form-floating mb-3">
+                <input class="form-control" id="title" type="text"   value="<%= foundBook.title %>" name="title" />
+                <label for="title">Title</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="description" type="text" placeholder="johndoe" value="<%= foundBook.description %>" name="description"/>
+                <label for="description">Description</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="floatingInput" type="text" placeholder="author" value="<%= foundBook.author %>" name="author"/>
+                <label for="floatingInput">Author</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="floatingInput" type="number" placeholder="price" value="<%= foundBook.price %>" name="price"/>
+                <label for="floatingInput">Price</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="floatingInput" type="number" placeholder="ISBN" value="<%= foundBook.isbn %>" name="isbn" />
+                <label for="floatingInput">ISBN</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="floatingInput" type="number" placeholder="pages" value="<%= foundBook.page %>" name="page" />
+                <label for="floatingInput">Page</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="floatingInput" type="link" placeholder="photo link" value="<%= foundBook.photo %>" name="photo" />
+                <label for="floatingInput">Picture Link</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <br><br>
+    </div>
+</main>
+
+<!-- /Body section -->
+
+<!-- Footer section -->
+<%- include("../includes/foot.ejs") %>
+<!-- /Footer section -->
