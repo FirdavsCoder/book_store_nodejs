@@ -73,29 +73,33 @@ const createBook = async (req, res) => {
 //@desc                 PUT Books
 //@access               Public
 const updateBook = async (req, res) => {
-    // const books = bookData.read()
-    const bookId = Number(req.params.id)
-    const body = req.body
-    await updateBookById(bookId, title = body.title, body.description, body.author, Number(body.price), Number(body.isbn), Number(body.page), body.photo)
-
-    // const body = req.body
-
-    // const foundBookIndex = books.findIndex((book) => book.id === bookId)
-
-    // const [foundBook] = await (await pool.query(`SELECT * FROM books WHERE id=${bookId}`)).rows
-    // console.log(foundBook);
+    try {
+        // const books = bookData.read()
+        const bookId = Number(req.params.id)
+        const body = req.body
+        await updateBookById(bookId, title = body.title, body.description, body.author, Number(body.price), Number(body.isbn), Number(body.page), body.photo)
     
-    // foundBook.title = body.title
-    // foundBook.description = body.description
-    // foundBook.author = body.author
-    // foundBook.price = body.price
-    // foundBook.isbn = body.isbn
-    // foundBook.page = body.page
-    // foundBook.photo = body.photo
+        // const body = req.body
     
-    // books.push(foundBook);
-    // bookData.write(books)
-    res.redirect("/books")
+        // const foundBookIndex = books.findIndex((book) => book.id === bookId)
+    
+        // const [foundBook] = await (await pool.query(`SELECT * FROM books WHERE id=${bookId}`)).rows
+        // console.log(foundBook);
+        
+        // foundBook.title = body.title
+        // foundBook.description = body.description
+        // foundBook.author = body.author
+        // foundBook.price = body.price
+        // foundBook.isbn = body.isbn
+        // foundBook.page = body.page
+        // foundBook.photo = body.photo
+        
+        // books.push(foundBook);
+        // bookData.write(books)
+        res.redirect("/books")
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 //@route                DELETE /books/:id
