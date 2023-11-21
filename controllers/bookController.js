@@ -3,6 +3,11 @@ const path = require("path")
 const BookClass = require("../lib/bookClass")
 const idGenerate = require("../lib/idGenerator")
 const ResponseData = require("../lib/responseData")
+const {
+    getBooks, getById
+} = require("../config/postgres")
+
+const pool = require("../config/db")
 
 const booksDatabasePath = path.join(__dirname, "../database/books.json")
 const bookData = new DataSource(booksDatabasePath)
@@ -12,8 +17,14 @@ const bookData = new DataSource(booksDatabasePath)
 //@desc                 Get Books
 //@access               Public
 const getAllBooks = async (req, res) => {
-    const books = bookData.read()
-    res.render("book/books", {title: "Barcha kitoblar", users: books})
+    try {
+        books = await getBooks()
+        console.log(books);
+        res.render("book/books", {title: "Barcha kitoblar", books})    
+    } catch (error) {
+        console.log(error);
+    }
+    
 }
 
 
@@ -21,9 +32,10 @@ const getAllBooks = async (req, res) => {
 //@desc                 Get Books
 //@access               Public
 const getBookById = async (req, res) => {
-    const books = bookData.read()
+    // const books = bookData.read()
     const bookId = Number(req.params.id)
-    const foundBook = books.find((book) => book.id === bookId)
+    const foundBook = await getById(bookId)
+    console.log(foundBook);
     console.log("Mana shu ishlab ketvotir");
     console.log(foundBook)
     if (foundBook) {
@@ -61,13 +73,13 @@ const createBook = async (req, res) => {
 //@desc                 PUT Books
 //@access               Public
 const updateBook = async (req, res) => {
-    const books = bookData.read()
+    // const books = bookData.read()
     const bookId = Number(req.params.id)
-    const body = req.body
+    // const body = req.body
 
-    const foundBookIndex = books.findIndex((book) => book.id === bookId)
+    // const foundBookIndex = books.findIndex((book) => book.id === bookId)
 
-    const [foundBook] = books.splice(foundBookIndex, 1)
+    const [foundBook] = await (await pool.query(`SELECT * FROM books WHERE id=${bookId}`)).rows
     console.log(foundBook);
     
     foundBook.title = body.title
@@ -101,11 +113,11 @@ const deleteBook = async (req, res) => {
 
 
 const getUpdatePage = async (req, res) => {
-    const books = bookData.read()
+    // const books = bookData.read()
     const bookId = Number(req.params.id)
-    const body = req.body
-    const foundBookIndex = books.findIndex((book) => book.id === bookId)
-    const [foundBook] = books.splice(foundBookIndex, 1)
+    // const body = req.body
+    // const foundBookIndex = books.findIndex((book) => book.id === bookId)
+    const [foundBook] = await (await pool.query(`SELECT * FROM books WHERE id=${bookId}`)).rows
 
     res.render("book/book-edit/update", {title: "Update ", foundBook})
 }
