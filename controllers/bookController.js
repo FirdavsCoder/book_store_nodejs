@@ -76,9 +76,7 @@ const updateBook = async (req, res) => {
     // const books = bookData.read()
     const bookId = Number(req.params.id)
     const body = req.body
-    await updateBookById(
-        id = bookId, 
-        title = body.title, 
+    await updateBookById(bookId, title = body.title, 
         description = body.description, 
         author = body.author, 
         price = Number(body.price), 

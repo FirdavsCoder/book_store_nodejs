@@ -17,14 +17,21 @@ const getById = async (id) => {
 }
 
 const updateBookById = async (id, title, description, author, price, isbn, page, photo) => {
-    console.log(id, title, description, author, price, isbn, page, photo)
-    const sql = `UPDATE books SET title=${title}, description=${description}, author=${author}, price=${price}, isbn=${isbn}, page=${page}, photo=${photo} WHERE id=${id}`
-    await pool.query(sql)
+    const sql = `UPDATE books SET title=$1, description=$2, author=$3, price=$4, isbn=$5, page=$6, photo=$7 WHERE id=$8`
+    await pool.query(sql, [title, description, author, price, isbn, page, photo, id])
+    return
+}
+
+const insertBook = async (title, description, author, price, isbn, page, photo) => {
+    const sql = `INSERT INTO books(title, description, author, price, isbn, page, photo) 
+    VALUES($1, $2, $3, $4, $5, $6, $7)` 
+    await pool.query(sql, [title, description, author, price, isbn, page, photo])
     return
 }
 
 module.exports = {
     getBooks,
     getById,
-    updateBookById
+    updateBookById, 
+    insertBook
 }
