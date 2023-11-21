@@ -11,12 +11,13 @@ const getBooks = async () => {
 
 
 const getById = async (id) => {
-    const sql = `SELECT * FROM books WHERE id=${id}`
-    const [foundBook] = (await pool.query(sql)).rows
+    const sql = `SELECT * FROM books WHERE id=$1`
+    const [foundBook] = (await pool.query(sql, [id])).rows
     return foundBook
 }
 
 const updateBookById = async (id, title, description, author, price, isbn, page, photo) => {
+    console.log(id, title, description, author, price, isbn, page, photo)
     const sql = `UPDATE books SET title=${title}, description=${description}, author=${author}, price=${price}, isbn=${isbn}, page=${page}, photo=${photo} WHERE id=${id}`
     await pool.query(sql)
     return
