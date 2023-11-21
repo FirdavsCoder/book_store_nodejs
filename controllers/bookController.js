@@ -35,9 +35,6 @@ const getBookById = async (req, res) => {
         // const books = bookData.read()
         const bookId = Number(req.params.id)
         const foundBook = await getById(bookId)
-        console.log(foundBook);
-        console.log("Mana shu ishlab ketvotir");
-        console.log(foundBook)
         if (foundBook) {
             res.render("book/detailPage", {title: `${foundBook.title} detail page`, foundBook})
         } else {
