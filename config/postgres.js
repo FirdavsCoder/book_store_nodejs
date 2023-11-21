@@ -29,9 +29,16 @@ const insertBook = async (title, description, author, price, isbn, page, photo) 
     return
 }
 
+const deleteBookById = async (id) => {
+    const sql = `DELETE FROM books WHERE id=$1`
+    await pool.query(sql, [id])
+    return
+}
+
 module.exports = {
     getBooks,
     getById,
     updateBookById, 
-    insertBook
+    insertBook,
+    deleteBookById
 }

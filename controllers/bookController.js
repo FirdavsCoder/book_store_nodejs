@@ -4,7 +4,7 @@ const BookClass = require("../lib/bookClass")
 const idGenerate = require("../lib/idGenerator")
 const ResponseData = require("../lib/responseData")
 const {
-    getBooks, getById, updateBookById, insertBook
+    getBooks, getById, updateBookById, insertBook, deleteBookById
 } = require("../config/postgres")
 
 const pool = require("../config/db")
@@ -102,16 +102,22 @@ const updateBook = async (req, res) => {
 //@desc                 DELETE Books
 //@access               Public
 const deleteBook = async (req, res) => {
-    const books = bookData.read()
-    const foundBookIndex = books.findIndex(book => book.id === Number(req.params.id))
-
-    if (foundBookIndex === -1) {
-        return res.status(404).json(new ResponseData("Book Not Found!", null, null))
+    try {
+        // const books = bookData.read()
+        await deleteBookById(Number(req.params.id))
+    
+        // const foundBookIndex = books.findIndex(book => book.id === Number(req.params.id))
+    
+        // if (foundBookIndex === -1) {
+        //     return res.status(404).json(new ResponseData("Book Not Found!", null, null))
+        // }
+    
+        // const [deletedBook] = books.splice(foundBookIndex, 1)
+        // bookData.write(books)
+        return res.redirect("/books")   
+    } catch (error) {
+        console.log(error);
     }
-
-    const [deletedBook] = books.splice(foundBookIndex, 1)
-    bookData.write(books)
-    return res.redirect("/books")
 }
 
 
