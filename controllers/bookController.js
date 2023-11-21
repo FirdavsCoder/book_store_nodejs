@@ -4,7 +4,7 @@ const BookClass = require("../lib/bookClass")
 const idGenerate = require("../lib/idGenerator")
 const ResponseData = require("../lib/responseData")
 const {
-    getBooks, getById
+    getBooks, getById, updateBookById
 } = require("../config/postgres")
 
 const pool = require("../config/db")
@@ -75,23 +75,24 @@ const createBook = async (req, res) => {
 const updateBook = async (req, res) => {
     // const books = bookData.read()
     const bookId = Number(req.params.id)
+    await updateBookById(bookId, body.title, body.description, body.author, body.price, body.isbn, body.page, body.photo)
     // const body = req.body
 
     // const foundBookIndex = books.findIndex((book) => book.id === bookId)
 
-    const [foundBook] = await (await pool.query(`SELECT * FROM books WHERE id=${bookId}`)).rows
-    console.log(foundBook);
+    // const [foundBook] = await (await pool.query(`SELECT * FROM books WHERE id=${bookId}`)).rows
+    // console.log(foundBook);
     
-    foundBook.title = body.title
-    foundBook.description = body.description
-    foundBook.author = body.author
-    foundBook.price = body.price
-    foundBook.isbn = body.isbn
-    foundBook.page = body.page
-    foundBook.photo = body.photo
+    // foundBook.title = body.title
+    // foundBook.description = body.description
+    // foundBook.author = body.author
+    // foundBook.price = body.price
+    // foundBook.isbn = body.isbn
+    // foundBook.page = body.page
+    // foundBook.photo = body.photo
     
-    books.push(foundBook);
-    bookData.write(books)
+    // books.push(foundBook);
+    // bookData.write(books)
     res.redirect("/books")
 }
 
