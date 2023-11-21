@@ -4,7 +4,7 @@ const BookClass = require("../lib/bookClass")
 const idGenerate = require("../lib/idGenerator")
 const ResponseData = require("../lib/responseData")
 const {
-    getBooks, getById, updateBookById
+    getBooks, getById, updateBookById, insertBook
 } = require("../config/postgres")
 
 const pool = require("../config/db")
@@ -50,9 +50,9 @@ const getBookById = async (req, res) => {
 //@desc                 POST Books
 //@access               Public
 const createBook = async (req, res) => {
-    const books = bookData.read()
+    // const books = bookData.read()
     const body = req.body
-    console.log(body);
+    // console.log(body);
 
     // if (!body.title || !isNaN(body.price) || !isNaN(body.isbn) || !body.description || !body.author || !isNaN(body.page) ){
     //     return res.render("404")
@@ -62,10 +62,10 @@ const createBook = async (req, res) => {
     // if (foundBookByName) {
     //     return res.render("404")
     // }
-    const newId = idGenerate(books)
-    const newBook = new BookClass(newId, body.title, body.description, body.author, body.price, body.isbn, body.page, body.photo)
-    books.push(newBook)
-    bookData.write(books)
+    // const newId = idGenerate(books)
+    await insertBook(body.title, body.description, body.author, body.price, body.isbn, body.page, body.photo)
+    // books.push(newBook)
+    // bookData.write(books)
     res.redirect("/books")
 }
 
@@ -120,7 +120,7 @@ const getUpdatePage = async (req, res) => {
     const bookId = Number(req.params.id)
     // const body = req.body
     // const foundBookIndex = books.findIndex((book) => book.id === bookId)
-    const [foundBook] = await (await pool.query(`SELECT * FROM books WHERE id=${bookId}`)).rows
+    const [foundBook] = (await pool.query(`SELECT * FROM books WHERE id=${bookId}`)).rows
 
     res.render("book/book-edit/update", {title: "Update ", foundBook})
 }
