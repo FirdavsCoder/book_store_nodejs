@@ -32,16 +32,20 @@ const getAllBooks = async (req, res) => {
 //@desc                 Get Books
 //@access               Public
 const getBookById = async (req, res) => {
-    // const books = bookData.read()
-    const bookId = Number(req.params.id)
-    const foundBook = await getById(bookId)
-    console.log(foundBook);
-    console.log("Mana shu ishlab ketvotir");
-    console.log(foundBook)
-    if (foundBook) {
-        res.render("book/detailPage", {title: `${foundBook.title} detail page`, foundBook})
-    } else {
-        res.render("book/404")
+    try {
+        // const books = bookData.read()
+        const bookId = Number(req.params.id)
+        const foundBook = await getById(bookId)
+        console.log(foundBook);
+        console.log("Mana shu ishlab ketvotir");
+        console.log(foundBook)
+        if (foundBook) {
+            res.render("book/detailPage", {title: `${foundBook.title} detail page`, foundBook})
+        } else {
+            res.render("book/404")
+        }
+    } catch (error) {
+        console.log(error);
     }
 }
 
@@ -50,23 +54,27 @@ const getBookById = async (req, res) => {
 //@desc                 POST Books
 //@access               Public
 const createBook = async (req, res) => {
-    // const books = bookData.read()
-    const body = req.body
-    // console.log(body);
-
-    // if (!body.title || !isNaN(body.price) || !isNaN(body.isbn) || !body.description || !body.author || !isNaN(body.page) ){
-    //     return res.render("404")
-    // }
-
-    // const foundBookByName = books.find((book) => book.name === body.name)
-    // if (foundBookByName) {
-    //     return res.render("404")
-    // }
-    // const newId = idGenerate(books)
-    await insertBook(body.title, body.description, body.author, body.price, body.isbn, body.page, body.photo)
-    // books.push(newBook)
-    // bookData.write(books)
-    res.redirect("/books")
+    try {
+        // const books = bookData.read()
+        const body = req.body
+        // console.log(body);
+    
+        // if (!body.title || !isNaN(body.price) || !isNaN(body.isbn) || !body.description || !body.author || !isNaN(body.page) ){
+        //     return res.render("404")
+        // }
+    
+        // const foundBookByName = books.find((book) => book.name === body.name)
+        // if (foundBookByName) {
+        //     return res.render("404")
+        // }
+        // const newId = idGenerate(books)
+        await insertBook(body.title, body.description, body.author, body.price, body.isbn, body.page, body.photo)
+        // books.push(newBook)
+        // bookData.write(books)
+        res.redirect("/books")
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 //@route                PUT /books/:id
@@ -126,18 +134,26 @@ const deleteBook = async (req, res) => {
 
 
 const getUpdatePage = async (req, res) => {
-    // const books = bookData.read()
-    const bookId = Number(req.params.id)
-    // const body = req.body
-    // const foundBookIndex = books.findIndex((book) => book.id === bookId)
-    const [foundBook] = (await pool.query(`SELECT * FROM books WHERE id=${bookId}`)).rows
-
-    res.render("book/book-edit/update", {title: "Update ", foundBook})
+    try {
+        // const books = bookData.read()
+        const bookId = Number(req.params.id)
+        // const body = req.body
+        // const foundBookIndex = books.findIndex((book) => book.id === bookId)
+        const [foundBook] = (await pool.query(`SELECT * FROM books WHERE id=${bookId}`)).rows
+    
+        res.render("book/book-edit/update", {title: "Update ", foundBook})
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 
 const addBookPage = (req, res) => {
-    res.render('book/add-book', {title: "Book Add Page"})
+    try {
+        res.render('book/add-book', {title: "Book Add Page"})
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 
