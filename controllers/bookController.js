@@ -19,7 +19,6 @@ const bookData = new DataSource(booksDatabasePath)
 const getAllBooks = async (req, res) => {
     try {
         books = await getBooks()
-        console.log(books);
         res.render("book/books", {title: "Barcha kitoblar", books})    
     } catch (error) {
         console.log(error);
