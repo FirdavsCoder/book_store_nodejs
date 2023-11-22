@@ -7,6 +7,8 @@
 <h1>Author:</h1>
 <h3><b>Firdavsbek Yorkulov</b></h3>
 
+
+Project screenshots: 👇
 <br>
 <hr>
 
