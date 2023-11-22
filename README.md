@@ -1,5 +1,15 @@
 <h1>Book Store Project With NodeJS</h1>
 
+
+<i>Run project: </i>
+<code>npm install</code>
+
+<h1>Author:</h1>
+<h3><b>Firdavsbek Yorkulov</b></h3>
+
+<br>
+<hr>
+
 Photo 1:
 ![image](https://github.com/FirdavsCoder/book_store_nodejs/assets/113686185/10b27135-b69b-43ad-b4b2-4d61085ac72f)
 
