@@ -8,9 +8,7 @@
 <h3><b>Firdavsbek Yorkulov</b></h3>
 
 
-Project screenshots: 👇
-<br>
-<hr>
+<h1>Project screenshots: 👇</h1>
 
 Photo 1:
 ![image](https://github.com/FirdavsCoder/book_store_nodejs/assets/113686185/10b27135-b69b-43ad-b4b2-4d61085ac72f)
